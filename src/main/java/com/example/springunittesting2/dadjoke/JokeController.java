@@ -1,18 +1,17 @@
-package com.example.springunittesting2;
+package com.example.springunittesting2.dadjoke;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 @RestController
-public class HelloController {
+public class JokeController {
 
     // We create a private instance variable jokeService to get access to the service's methods
     private JokeService jokeService;
 
     // Since our JokeService class has the @Service annotation,
     // the Spring framework will take care of passing in an instance of the joke service into the HelloController() constructor
-    public HelloController(JokeService jokeService) {
+    public JokeController(JokeService jokeService) {
         this.jokeService = jokeService;
     }
 

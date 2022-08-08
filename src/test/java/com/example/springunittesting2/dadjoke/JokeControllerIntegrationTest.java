@@ -1,4 +1,4 @@
-package com.example.springunittesting2;
+package com.example.springunittesting2.dadjoke;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -23,8 +22,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 // With the @WebMvcTest annotation, we get a bean that can get autowired by Spring to give us access to a
 // MockMvc instance that we can then use to make actual http calls to our end points
-@WebMvcTest(HelloController.class)
-public class HelloControllerIntegrationTest {
+@WebMvcTest(JokeController.class)
+public class JokeControllerIntegrationTest {
     @Autowired
     private MockMvc mockMvc;
 

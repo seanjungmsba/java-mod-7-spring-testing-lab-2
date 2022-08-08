@@ -1,4 +1,4 @@
-package com.example.springunittesting2;
+package com.example.springunittesting2.dadjoke;
 
 /*
 The main differences between this "Acceptance" test and our earlier "Integration" test are:
@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class HelloControllerAcceptanceTest {
+class JokeControllerAcceptanceTest {
 
     @Autowired
     private MockMvc mockMvc;

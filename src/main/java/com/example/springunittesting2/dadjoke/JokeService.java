@@ -1,4 +1,4 @@
-package com.example.springunittesting2;
+package com.example.springunittesting2.dadjoke;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
@@ -19,10 +19,11 @@ public class JokeService {
         String result = restTemplate.getForObject(apiURL, DadJoke.class).joke;
         return result;
     }
+
+    class DadJoke {
+        public String id;
+        public String joke;
+        public String status;
+    }
 }
 
-class DadJoke {
-    public String id;
-    public String joke;
-    public String status;
-}

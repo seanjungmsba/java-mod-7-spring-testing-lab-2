@@ -1,4 +1,4 @@
-package com.example.springunittesting2;
+package com.example.springunittesting2.dadjoke;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -6,7 +6,7 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-class HelloControllerUnitTest {
+class JokeControllerUnitTest {
     @Test
     void shouldReturnGreeting() {
         // We define a jokeService object of type JokeService
@@ -15,7 +15,7 @@ class HelloControllerUnitTest {
         JokeService jokeService = Mockito.mock(JokeService.class);
         String dadJoke = "Did you hear about the new restaurant on the moon? The food is great, " +
                 "but there’s just no atmosphere.";
-        HelloController helloController = new HelloController(jokeService);
+        JokeController helloController = new JokeController(jokeService);
         // when().thenReturn(): this construct allows us to tell Mockito what to return when a specific method of our mock object is called
         // this is what hardcoded that specific response for every time that method is called
         when(jokeService.getDadJoke()).thenReturn(dadJoke);
